@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>Hi there</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Lato:300'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#sh-menu").click(function(){
+                    //alert($(".menu").css("display"));
+                    if($(".menu").css("display")=="none")
+                        $(".menu").show();
+                    else
+                        $(".menu").hide();
+                });
+                $(".menu-elem").hover(function(){
+                    $(this).children().css('display','inline');
+                });
+                $(".menu-elem").mouseleave(function(){
+                    $(this).children().css('display','none');
+                });
+            });
+        </script> 
+        <style>
+            body{
+                font-family: 'lato';
+            }
+            .center {
+                margin: auto;
+                text-align: center;
+            }
+            .comm-width{
+                width: 251px;
+            }
+            .up-nav{
+                background-color: #4b4b4a;
+                display: flex;
+                height: 43px;
+            }   
+            div div{
+                color: #e7e7e8;
+            }
+            .nav-elem{
+                padding-top: 10px;
+                cursor: pointer;
+                width: 100%;
+                border-right: 1px #3e3e3d inset;
+            }
+            .nav-elem:last-child{
+                border-right: none;
+            }
+            .nav-elem:hover{
+                background-color: #807f7d;     
+            }
+            .menu{
+                margin-top: 4px;
+                background-color: #4daf7c;
+                text-align: left;
+            }
+            .menu-elem{  
+                padding: 9px 15px 9px 15px;       
+            }
+            .menu-elem:hover{
+                background-color: #7ec29c;
+                color: #ffffff;
+            }
+            .menu a{
+                text-decoration: none !important;
+            }
+            .fa{
+                font-size: 10px;
+            }
+            .menu-elem .fa{
+                float: right;
+                padding-top: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="center comm-width">
+            <h3><a href="https://dribbble.com/shots/939676" target="_blank" style="color: #807f7d">Simple Flat Menu</a></h3>
+            <div class="up-nav">
+                <div class="nav-elem">
+                    <i class="fa fa-check"></i> Liked
+                </div>
+                <div class="nav-elem">
+                    <i class="fa fa-play"></i> Listen
+                </div>
+                <div class="nav-elem" id="sh-menu">
+                    <i class="fas fa-cog"></i>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="menu">
+                <a href="#"><div class="menu-elem">Messages<i class="fa fa-play" style="display: none"></i></div></a>
+                <a href="#"><div class="menu-elem">Dashboard<i class="fa fa-play" style="display: none"></i></div></a>
+                <a href="#"><div class="menu-elem">Recent Activity<i class="fa fa-play" style="display: none"></i></div></a>
+                <a href="#"><div class="menu-elem">Unlike<i class="fa fa-play" style="display: none"></i></div></a>
+            </div>
+        </div>
+                                                             
+    </body>
+</html>
